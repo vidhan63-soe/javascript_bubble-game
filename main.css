@@ -25,20 +25,22 @@ html,body{
     
     
 }
-#ptop{
+#ptop {
     padding: 0% 30%;
     background-color: rgb(11, 87, 18);
-    width:100%;
-    height:100px;
+    width: 100%;
+    height: 100px;
     padding: 10px;
     border-radius: 10px;
-    display: flex; 
-    align-items: center;  
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 60px;
-    padding-right: 60px;
-    
-}
+    /* Make the content responsive */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
 .elem{
     /* width: 25%; */
     display: flex;
@@ -64,9 +66,11 @@ html,body{
     padding: 20px;
     width: 100%;
     height: calc(100% - 100px);
-}
-
-.bubble{
+    /* Make the bubble elements responsive */
+    overflow-x: auto;
+  }
+  
+  .bubble {
     width: 60px;
     height: 60px;
     background-color:rgb(11, 87, 18);
@@ -75,7 +79,8 @@ html,body{
     justify-content: center;
     display: flex;
     align-items: center;
-}
+  }
+  
 .bubble:hover{
     background-color: blueviolet;
     cursor: pointer;
