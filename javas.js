@@ -19,25 +19,32 @@ function makeBubble() {
 }
 
 function runTimer() {
+    var timer = 60; // Set the timer duration in seconds
     var timerint = setInterval(function () {
-        if (timer > 0) {
-            timer--;
-            document.querySelector("#timerval").textContent = timer;
-        } else {
-            clearInterval(timerint);
-        }
+      if (timer > 0) {
+        timer--;
+        document.querySelector("#timerval").textContent = timer;
+      } else {
+        // Show an alert message
+        alert("Time is over");
+        clearInterval(timerint);
+      }
     }, 1000);
-}
+  }
+  
 
 document.querySelector("#pbtm").addEventListener("click", function (dets) {
     var clicknum = Number(dets.target.textContent);
     console.log(clicknum);
     if (clicknum == hitrn) {
-        score += 10;
-        document.querySelector("#scoreval").textContent = score; // Update score in HTML
+      // Delete the bubble content
+      dets.target.remove();
+      score += 10;
+      document.querySelector("#scoreval").textContent = score; // Update score in HTML
     }
     console.log(score);
-});
+  });
+  
 
 getNewHi(); // Call getNewHi() when the timer reaches 0
 
